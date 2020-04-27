@@ -1,3 +1,4 @@
+import { HttpWrapperService } from './../../../../shared/services/http-wrapper/http-wrapper.service';
 import { LayoutStateService } from './../../../../shared/services/layout-state/layout-state.service';
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 
@@ -9,7 +10,8 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 export class UnderConstructionComponent implements OnInit {
 
   constructor(
-    private layoutStateSvc: LayoutStateService
+    private layoutStateSvc: LayoutStateService,
+    private httpWrapper: HttpWrapperService
   ) { }
 
   ngOnInit(): void {
