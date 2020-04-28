@@ -1,3 +1,7 @@
+import { SharedModule } from './../../shared/shared.module';
+import { MatCardModule } from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -9,7 +13,10 @@ import { LandingComponent } from './views/landing/landing.component';
   declarations: [LandingComponent],
   imports: [
     CommonModule,
-    LandingRoutingModule
+    LandingRoutingModule,
+    MatCardModule,
+    MatIconModule,
+    SharedModule,
   ]
 })
 export class LandingModule { }

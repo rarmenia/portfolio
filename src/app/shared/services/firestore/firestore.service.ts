@@ -1,3 +1,4 @@
+import { ProfileModel } from './../../models/profile.model';
 import { AngularFirestoreDocument } from '@angular/fire/firestore/public_api';
 import { environment } from './../../../../environments/environment';
 import { shareReplay, tap } from 'rxjs/operators';
@@ -10,12 +11,12 @@ import { AngularFirestore } from '@angular/fire/firestore';
 })
 export class FirestoreService {
 
-  private infoDoc: AngularFirestoreDocument<any> = this.afs.doc<any>('portfolio/info');
-  info$: Observable<any> = this.infoDoc.valueChanges().pipe(
+  private profileDoc: AngularFirestoreDocument<ProfileModel> = this.afs.doc<ProfileModel>('portfolio/profile');
+  profile$: Observable<ProfileModel> = this.profileDoc.valueChanges().pipe(
     shareReplay(1),
-    tap(info => {
+    tap(profile => {
       if (!environment.production) {
-        console.log('DEV::CONSOLE -- Firebase Info Response', info);
+        console.log('DEV::CONSOLE -- Firebase Profile Response', profile);
       }
     })
   );

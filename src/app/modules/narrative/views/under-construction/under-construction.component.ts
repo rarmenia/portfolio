@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LayoutStateService } from 'src/app/shared/services/layout-state/layout-state.service';
+import { LayoutStateService } from '@shared/services/layout-state/layout-state.service';
 
 @Component({
   selector: 'app-under-construction',
@@ -16,7 +16,7 @@ export class UnderConstructionComponent implements OnInit {
     this.layoutStateSvc.updateLayoutState({
       displayHeader: false,
       displayLeftNav: false,
-      displayFooter: false
+      displayFooter: true
     });
   }
 

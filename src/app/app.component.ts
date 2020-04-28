@@ -1,5 +1,5 @@
 import { LayoutStateService } from './shared/services/layout-state/layout-state.service';
-import { Component, ChangeDetectorRef } from '@angular/core';
+import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ILayoutState } from './shared/models/layout-state.interface';
 
@@ -10,7 +10,6 @@ import { ILayoutState } from './shared/models/layout-state.interface';
 })
 export class AppComponent {
 
-  layoutState: ILayoutState = null;
   layoutState$: Observable<ILayoutState> = this.layoutStateSvc.layoutState$;
 
   constructor(
