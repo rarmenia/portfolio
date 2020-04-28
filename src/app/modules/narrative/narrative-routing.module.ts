@@ -7,6 +7,14 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
+    redirectTo: 'page-not-found'
+  },
+  {
+    path: 'page-not-found',
+    redirectTo: 'under-construction'
+  },
+  {
+    path: 'under-construction',
     component: UnderConstructionComponent
   }
 ];
@@ -15,4 +23,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class UnderConstructionRoutingModule { }
+export class NarrativeRoutingModule { }

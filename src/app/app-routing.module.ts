@@ -6,7 +6,15 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    loadChildren: () => import('./modules/under-construction/under-construction.module').then(m => m.UnderConstructionModule)
+    redirectTo: 'landing',
+  },
+  {
+    path: 'landing',
+    loadChildren: () => import('./modules/landing/landing.module').then(m => m.LandingModule)
+  },
+  {
+    path: 'narrative',
+    loadChildren: () => import('./modules/narrative/narrative.module').then(m => m.NarrativeModule)
   }
 ];
 

@@ -2,7 +2,6 @@ import { LayoutStateService } from './shared/services/layout-state/layout-state.
 import { Component, ChangeDetectorRef } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ILayoutState } from './shared/models/layout-state.interface';
-import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +15,6 @@ export class AppComponent {
 
   constructor(
     private layoutStateSvc: LayoutStateService,
-    private cd: ChangeDetectorRef,
   ) { }
 
 

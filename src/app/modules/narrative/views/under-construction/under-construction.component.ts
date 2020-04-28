@@ -1,6 +1,5 @@
-import { HttpWrapperService } from './../../../../shared/services/http-wrapper/http-wrapper.service';
-import { LayoutStateService } from './../../../../shared/services/layout-state/layout-state.service';
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { LayoutStateService } from 'src/app/shared/services/layout-state/layout-state.service';
 
 @Component({
   selector: 'app-under-construction',
@@ -11,7 +10,6 @@ export class UnderConstructionComponent implements OnInit {
 
   constructor(
     private layoutStateSvc: LayoutStateService,
-    private httpWrapper: HttpWrapperService
   ) { }
 
   ngOnInit(): void {
