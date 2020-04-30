@@ -1,0 +1,14 @@
+.build-expanded {
+  width: calc(100vw - 3rem);
+  transition: width .75s ease-in-out;
+}
+
+.build-collapsed {
+  width: 2em;
+  transition: width .75s ease-in-out;
+}
+
+.build-icon {
+  max-height: 1.75em !important;
+  max-width: 1.75em !important;
+}
