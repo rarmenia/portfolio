@@ -1,4 +1,4 @@
-import { ProfileModel } from '@shared/models/profile.model';
+import { ProfileModel } from '@shared/models/profile/profile.model';
 import { LayoutStateService } from '@shared/services/layout-state/layout-state.service';
 import { Observable } from 'rxjs';
 import { Component, OnInit, } from '@angular/core';
@@ -37,16 +37,21 @@ export class LandingComponent implements OnInit {
   ngOnInit(): void {
     this.layoutStateSvc.updateLayoutState({
       displayHeader: false,
+      displayLeftNav: false,
       displayFooter: true,
-      displayLeftNav: false
     });
   }
 
   isTodayBirthday(): boolean {
-    const today = new Date();
-    const birthday = this.profile.birthday.toDate();
 
-    return today.getDate() === birthday.getDate() && today.getMonth() === birthday.getMonth();
+    if (this.profile) {
+      const today = new Date();
+      const birthday = this.profile.birthday.toDate();
+
+      return today.getDate() === birthday.getDate() && today.getMonth() === birthday.getMonth();
+    }
+
+    return false;
 
   }
 

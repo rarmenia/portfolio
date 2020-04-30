@@ -16,7 +16,7 @@ export class PageNotFoundComponent implements OnInit {
     this.layoutStateSvc.updateLayoutState({
       displayHeader: false,
       displayLeftNav: false,
-      displayFooter: true
+      displayFooter: true,
     });
   }
 }

@@ -1,16 +1,54 @@
-<mat-card class="position-absolute" style="bottom: 1em; left: 1em;">
+<mat-card>
 
-  <div style="height: 2em;" [ngClass]="expanded ? 'build-expanded' : 'build-collapsed'" class="overflow-hidden">
+  <div style="height: 2em;" [ngClass]="expanded || keepOpen ? 'build-expanded' : 'build-collapsed'" class="overflow-hidden">
     <div class="d-flex flex-row ">
       <div class="d-flex flex-row flex-shrink-1">
         <a href="javascript: void(0)" (click)="expanded = !expanded" style="width: 24px; height: 24px;">
           <mat-icon>info</mat-icon>
         </a>
       </div>
-      <div class="d-flex flex-row flex-grow align-items-center text-truncate overflow-hidden ml-4">
-        <div>
-          Built with:
+      <div
+        class="d-flex flex-row flex-grow-1 align-items-center justify-content-between text-truncate overflow-scroll ml-4">
+        <div class="font-oswald-light">
+          Built With:
         </div>
+        <div>
+          <img class="img-fluid build-icon" src="assets/images/icons/firebase-logo.svg"
+            style="width: 5vw; height: 5vw;" title="Firebase" alt="firebase logo">
+        </div>
+        <div>
+          <img class="img-fluid build-icon" src="assets/images/icons/angular.svg" style="width: 5vw; height: 5vw;"
+            title="Angular" alt="angular logo">
+        </div>
+        <div>
+          <img class="img-fluid build-icon" src="assets/images/icons/material.svg"
+            style="width: 5vw; height: 5vw;" title="Material" alt="material logo">
+        </div>
+        <div>
+          <img class="img-fluid build-icon" src="assets/images/icons/vscode-logo.svg"
+            style="width: 5vw; height: 5vw;" title="VSCode" alt="vscode logo">
+        </div>
+        <div>
+          <img class="img-fluid build-icon" src="assets/images/icons/git-orange.png"
+            style="width: 5vw; height: 5vw;" title="Git" alt="git logo">
+        </div>
+        <div>
+          <img class="img-fluid build-icon" src="assets/images/icons/azure-repos.svg"
+            style="width: 5vw; height: 5vw;" title="Azure Repos" alt="azure repos logo">
+        </div>
+        <div>
+          <img class="img-fluid build-icon" src="assets/images/icons/azure-devops.svg"
+            style="width: 5vw; height: 5vw;" title="Azure Devops" alt="azure devops logo">
+        </div>
+        <div>
+          <img class="img-fluid build-icon" src="assets/images/icons/azure-pipelines.svg"
+            style="width: 5vw; height: 5vw;" title="Azure Pipelines" alt="azure pipelines logo">
+        </div>
+        <div>
+          <img class="img-fluid build-icon" src="assets/images/icons/azure-app-services.svg"
+            style="width: 5vw; height: 5vw;" title="Azure App Services" alt="azure app services logo">
+        </div>
+
       </div>
     </div>
 

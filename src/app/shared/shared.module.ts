@@ -10,7 +10,7 @@ import { BuiltWithComponent } from './components/built-with/built-with.component
 @NgModule({
   declarations: [
     BusyIndicatorComponent,
-    BuiltWithComponent
+    BuiltWithComponent,
   ],
   imports: [
     MatCardModule,

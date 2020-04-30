@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-built-with',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuiltWithComponent implements OnInit {
 
+  @Input() keepOpen: boolean;
   expanded = false;
 
   constructor() { }

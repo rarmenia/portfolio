@@ -17,10 +17,10 @@
           <ng-container *ngTemplateOutlet="info"></ng-container>
         </div>
       </div>
-      <div class="position-absolute" style="bottom: .5em; right: 1em;">
+      <div class="position-absolute" style="top: .5em; right: 1em;">
         <div *ngIf="profile">
           <div *ngIf="todayIsBirthday">
-            <mat-icon>cake</mat-icon>
+            <mat-icon title="Today is their birthday.">cake</mat-icon>
           </div>
         </div>
       </div>
@@ -41,8 +41,22 @@
   <div *ngIf="profile" class="text-center">
     <h1 class="font-oswald-bold">{{profile.name.full}}</h1>
     <h3 class="text-secondary font-open-sans-regular">{{profile.location.l1}}, {{profile.location.l2}}, {{profile.location.l3}}</h3>
-    <br/>
-    <h2 class="text-dark">{{profile.title}}</h2>
+    <br />
+    <div class="row">
+      <div class="col-3 offset-3 text-center">
+        <a [href]="'mailto:'+profile.contact.email" class="text-dark" alt="email" title="Email Me"><mat-icon>email</mat-icon></a>
+      </div>
+      <div class="col-3 text-center">
+        <a [href]="profile.contact.github.link" class="text-dark" alt="github" title="View My Github"><img src="assets/images/icons/github-logo.png" width="20px" height="20px"></a>
+      </div>
+    </div>
+    <br />
+    <h2 class="text-dark font-open-sans-regular">{{profile.title}}</h2>
+    <br />
+    <div class="w-100">
+      <button routerLink="/narrative/under-construction" class="btn btn-primary w-100">Continue to full site. <mat-icon>arrow_right_alt</mat-icon></button>
+    </div>
+
   </div>
 </ng-template>
 <!-- <div *ngIf="info !== null; else ghost">
