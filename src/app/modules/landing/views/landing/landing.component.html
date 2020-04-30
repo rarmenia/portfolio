@@ -42,12 +42,15 @@
     <h1 class="font-oswald-bold">{{profile.name.full}}</h1>
     <h3 class="text-secondary font-open-sans-regular">{{profile.location.l1}}, {{profile.location.l2}}, {{profile.location.l3}}</h3>
     <br />
-    <div class="row">
-      <div class="col-3 offset-3 text-center">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-3 text-center">
         <a [href]="'mailto:'+profile.contact.email" class="text-dark" alt="email" title="Email Me"><mat-icon>email</mat-icon></a>
       </div>
       <div class="col-3 text-center">
         <a [href]="profile.contact.github.link" class="text-dark" alt="github" title="View My Github"><img src="assets/images/icons/github-logo.png" width="20px" height="20px"></a>
+      </div>
+      <div class="col-3 text-center">
+        <a href="https://dev.azure.com/lazerzes/" class="text-dark" alt="devops"><img src="assets/images/icons/azure-devops.svg" width="20px" height="20px"></a>
       </div>
     </div>
     <br />
