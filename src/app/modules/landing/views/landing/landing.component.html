@@ -2,7 +2,7 @@
   <div class="d-flex flex-column justify-content-center align-items-center h-100">
     <mat-card>
       <div class="d-none d-md-flex flex-row my-3">
-        <div class="flex-shrink-1 ml-4" [style]="profile ? 'margin-right: '+ profile.icon.width / 2 + 'px;' : ''">
+        <div class="flex-shrink-1 ml-4 align-items-center justify-content-center d-flex flex-column" [style]="profile ? 'margin-right: '+ profile.icon.width / 2 + 'px;' : ''">
           <ng-container *ngTemplateOutlet="icon"></ng-container>
         </div>
         <div class="flex-grow-1 d-flex align-items-center"  [style]="profile ? 'margin-right: '+ profile.icon.width / 4 + 'px;' : ''">
@@ -54,7 +54,10 @@
     <h2 class="text-dark font-open-sans-regular">{{profile.title}}</h2>
     <br />
     <div class="w-100">
-      <button routerLink="/narrative/under-construction" class="btn btn-primary w-100">Continue to full site. <mat-icon>arrow_right_alt</mat-icon></button>
+      <button routerLink="/narrative/under-construction" class="btn btn-primary w-100 d-inline-flex align-items-center">
+        <div>Continue to full site.</div>
+        <mat-icon>arrow_right_alt</mat-icon>
+      </button>
     </div>
 
   </div>

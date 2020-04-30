@@ -1,6 +1,7 @@
 <mat-card>
 
-  <div style="height: 2em;" [ngClass]="expanded || keepOpen ? 'build-expanded' : 'build-collapsed'" class="overflow-hidden">
+  <div style="height: 2em;" [ngClass]="expanded || keepOpen ? 'build-expanded' : 'build-collapsed'"
+    class="overflow-hidden">
     <div class="d-flex flex-row ">
       <div class="d-flex flex-row flex-shrink-1">
         <a href="javascript: void(0)" (click)="expanded = !expanded" style="width: 24px; height: 24px;">
@@ -13,40 +14,58 @@
           Built With:
         </div>
         <div>
-          <img class="img-fluid build-icon" src="assets/images/icons/firebase-logo.svg"
-            style="width: 5vw; height: 5vw;" title="Firebase" alt="firebase logo">
+          <a alt="firebase link" title="Firebase" target="_blank" href="https://firebase.google.com/">
+            <img class="img-fluid build-icon" src="assets/images/icons/firebase-logo.svg"
+              style="width: 5vw; height: 5vw;" title="Firebase" alt="firebase logo">
+          </a>
         </div>
         <div>
-          <img class="img-fluid build-icon" src="assets/images/icons/angular.svg" style="width: 5vw; height: 5vw;"
-            title="Angular" alt="angular logo">
+          <a alt="Angular link" title="Angular" target="_blank" href="https://angular.io/">
+            <img class="img-fluid build-icon" src="assets/images/icons/angular.svg" style="width: 5vw; height: 5vw;"
+              title="Angular" alt="angular logo">
+          </a>
         </div>
         <div>
-          <img class="img-fluid build-icon" src="assets/images/icons/material.svg"
-            style="width: 5vw; height: 5vw;" title="Material" alt="material logo">
+          <a alt="angular material link" title="Angular Material" target="_blank" href="https://material.angular.io/">
+            <img class="img-fluid build-icon" src="assets/images/icons/material.svg" style="width: 5vw; height: 5vw;"
+              title="Material" alt="material logo">
+          </a>
         </div>
         <div>
-          <img class="img-fluid build-icon" src="assets/images/icons/vscode-logo.svg"
-            style="width: 5vw; height: 5vw;" title="VSCode" alt="vscode logo">
+          <a alt="vscode link link" title="VS Code" target="_blank" href="https://code.visualstudio.com/">
+            <img class="img-fluid build-icon" src="assets/images/icons/vscode-logo.svg" style="width: 5vw; height: 5vw;"
+              title="VSCode" alt="vscode logo">
+          </a>
         </div>
         <div>
-          <img class="img-fluid build-icon" src="assets/images/icons/git-orange.png"
-            style="width: 5vw; height: 5vw;" title="Git" alt="git logo">
+          <a alt="Git link" title="Git" target="_blank" href="https://git-scm.com/">
+            <img class="img-fluid build-icon" src="assets/images/icons/git-orange.png" style="width: 5vw; height: 5vw;"
+              title="Git" alt="git logo">
+          </a>
         </div>
         <div>
-          <img class="img-fluid build-icon" src="assets/images/icons/azure-repos.svg"
-            style="width: 5vw; height: 5vw;" title="Azure Repos" alt="azure repos logo">
+          <a alt="Azure Repos link" title="Azure Repos" target="_blank" href="https://azure.microsoft.com/en-us/services/devops/repos/">
+            <img class="img-fluid build-icon" src="assets/images/icons/azure-repos.svg" style="width: 5vw; height: 5vw;"
+              title="Azure Repos" alt="azure repos logo">
+          </a>
         </div>
         <div>
-          <img class="img-fluid build-icon" src="assets/images/icons/azure-devops.svg"
-            style="width: 5vw; height: 5vw;" title="Azure Devops" alt="azure devops logo">
+          <a alt="Azure Devops link" title="Azure Devops" target="_blank" href="https://docs.microsoft.com/en-us/azure/devops/?view=azure-devops">
+            <img class="img-fluid build-icon" src="assets/images/icons/azure-devops.svg"
+              style="width: 5vw; height: 5vw;" title="Azure Devops" alt="azure devops logo">
+          </a>
         </div>
         <div>
-          <img class="img-fluid build-icon" src="assets/images/icons/azure-pipelines.svg"
-            style="width: 5vw; height: 5vw;" title="Azure Pipelines" alt="azure pipelines logo">
+          <a alt="Azure Pipelines link" title="Azure Pipelines" target="_blank" href="https://azure.microsoft.com/en-us/services/devops/pipelines/">
+            <img class="img-fluid build-icon" src="assets/images/icons/azure-pipelines.svg"
+              style="width: 5vw; height: 5vw;" title="Azure Pipelines" alt="azure pipelines logo">
+          </a>
         </div>
         <div>
-          <img class="img-fluid build-icon" src="assets/images/icons/azure-app-services.svg"
-            style="width: 5vw; height: 5vw;" title="Azure App Services" alt="azure app services logo">
+          <a alt="Azure App Services link" title="Azure App Services" target="_blank" href="https://azure.microsoft.com/en-us/services/app-service/">
+            <img class="img-fluid build-icon" src="assets/images/icons/azure-app-services.svg"
+              style="width: 5vw; height: 5vw;" title="Azure App Services" alt="azure app services logo">
+          </a>
         </div>
 
       </div>
