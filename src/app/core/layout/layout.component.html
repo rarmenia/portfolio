@@ -1,0 +1,24 @@
+<ng-container *ngIf="contentBackground$ | async"></ng-container> <!-- Hook into content background observable -->
+
+<div id="app-container" *ngIf="layoutState$ | async as layoutState">
+  <div class="d-flex flex-column content-fill">
+    <div class="flex-shrink-1" role="heading" *ngIf="!layoutState?.hideToolbar">
+      <mat-toolbar color="primary">
+        <mat-toolbar-row>
+          <app-toolbar [sidenavTarget]="sidenav"></app-toolbar>
+        </mat-toolbar-row>
+      </mat-toolbar>
+    </div>
+    <div class="flex-grow-1" role="main" style="max-height: 100%; overflow: hidden;" [style.background]="contentBackground ? contentBackground : 'inherit'">
+      <mat-sidenav-container class="content-fill">
+        <mat-sidenav #sidenav>
+          <app-sidenav></app-sidenav>
+        </mat-sidenav>
+        <mat-sidenav-content style="min-height: -webkit-min-content; overflow: auto;">
+          <router-outlet></router-outlet>
+        </mat-sidenav-content>
+      </mat-sidenav-container>
+    </div>
+  </div>
+</div>
+

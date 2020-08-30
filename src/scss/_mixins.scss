@@ -1,0 +1,22 @@
+@mixin classesFromMap($initialMap) {
+
+  @each $prefix,
+  $class in $initialMap {
+    $property: map-get($map: $class, $key: 'property');
+    $values: map-get($map: $class, $key: 'values');
+
+    @each $suffix,
+    $value in $values {
+      .#{$prefix}-#{$suffix} {
+        @if ($value) {
+          #{$property}: #{$value};
+        }
+
+        @else {
+          #{$property}: #{$suffix};
+        }
+      }
+    }
+  }
+
+}
