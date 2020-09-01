@@ -1,4 +1,5 @@
 $flex: ("flex": (property: flex-direction,
+    breakpoints: true,
     values: row column row-reverse column-reverse),
   "flex-grow": (property: flex-grow,
     values: 0 1),

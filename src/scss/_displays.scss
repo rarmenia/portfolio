@@ -25,7 +25,7 @@ $display-types: 'inline',
 
 @import './breakpoints';
 
-@each $breakpoint in $bootstrap-breakpoints {
+@each $breakpoint in $breakpoints {
 
   $infix: map-get($map: $breakpoint, $key: 'infix');
   $size: map-get($map: $breakpoint, $key: 'size');
@@ -38,21 +38,6 @@ $display-types: 'inline',
     }
   }
 }
-
-@each $breakpoint in $material-breakpoints {
-
-  $infix: map-get($map: $breakpoint, $key: 'infix');
-  $size: map-get($map: $breakpoint, $key: 'size');
-
-  @media screen and (min-width: #{$size}px) {
-    @each $display in $display-types {
-      .d-#{$infix}-#{$display} {
-        display: #{$display} !important;
-      }
-    }
-  }
-}
-
 
 @each $display in $display-types {
   .d-#{$display} {

@@ -1,11 +1,16 @@
-import { LangLocation } from './lang-location.model';
 import { firestore } from 'firebase';
-
 import GeoPoint = firestore.GeoPoint;
+
+import { AddressComponent } from './address-component.model';
 
 export class Location {
 
-  geo: GeoPoint;
-  location: LangLocation[];
+  geoPoint: GeoPoint | null | undefined;
+  addressComponents: AddressComponent[] | null | undefined;
+
+  constructor(location: Location);
+  constructor(location?: Partial<Location>) {
+    Object.assign(this, location);
+  }
 
 }

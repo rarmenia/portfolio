@@ -59,7 +59,18 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "allowedCommonJsDependencies": [
+              "lodash",
+              "@firebase",
+              "@angular/fire/firestore",
+              "firebase/app",
+              "@firebase/firestore",
+              "@firebase/app",
+              "@firebase/auth",
+              "@firebase/component",
+              "@firebase/util"
+            ]
           },
           "configurations": {
             "production": {
