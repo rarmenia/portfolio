@@ -54,12 +54,12 @@ export class LandingComponent implements OnInit, OnDestroy {
     return '';
   }
 
-  public getAge(): number {
+  public getAge(): number | undefined{
     const birthday: Timestamp | undefined = this.profileInfo?.birthday;
 
     const birthdayMoment: moment.Moment = moment(birthday?.toDate() ?? new Date());
 
-    return moment().diff(birthdayMoment, 'years');
+    return moment().diff(birthdayMoment, 'years') || undefined;
 
   }
 
@@ -67,7 +67,14 @@ export class LandingComponent implements OnInit, OnDestroy {
     const location: Location | undefined = this.profileInfo?.location;
     const addressComponents = location?.addressComponents ?? [];
 
-    return addressComponents.map((component: AddressComponent) => component.shortName).join(', ');
+    return addressComponents
+      .filter((component: AddressComponent) =>  !component.types?.includes('locality'))
+      .map((component: AddressComponent) => component.shortName).join(', ');
+  }
+
+  public handleNavClick(): void {
+    // TODO: replace with navigation
+    console.log('do navigation');
   }
 
 }

@@ -1,4 +1,4 @@
-import { startWith, shareReplay, delay, map, filter, skip } from 'rxjs/operators';
+import { shareReplay, filter } from 'rxjs/operators';
 import { Profile } from './../models/profile/profile.model';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
