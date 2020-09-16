@@ -5,7 +5,7 @@
     <div class="flex-shrink-1" role="heading" *ngIf="!layoutState?.hideToolbar">
       <mat-toolbar color="primary">
         <mat-toolbar-row>
-          <app-toolbar [sidenavTarget]="sidenav"></app-toolbar>
+          <app-toolbar [sidenavTarget]="sidenav" class='w-100'></app-toolbar>
         </mat-toolbar-row>
       </mat-toolbar>
     </div>
@@ -14,7 +14,7 @@
         <mat-sidenav #sidenav>
           <app-sidenav></app-sidenav>
         </mat-sidenav>
-        <mat-sidenav-content style="min-height: -webkit-min-content; overflow: auto;">
+        <mat-sidenav-content style="min-height: -webkit-min-content; overflow: auto;" class="p-2">
           <router-outlet></router-outlet>
         </mat-sidenav-content>
       </mat-sidenav-container>

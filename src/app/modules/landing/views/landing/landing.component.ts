@@ -12,6 +12,7 @@ import { firestore } from 'firebase';
 import Timestamp = firestore.Timestamp;
 
 import * as moment from 'moment';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-landing',
@@ -29,6 +30,7 @@ export class LandingComponent implements OnInit, OnDestroy {
   constructor(
     private layoutSvc: LayoutStateService,
     private fs: FirestoreService,
+    private router: Router,
   ) { }
 
   public ngOnInit(): void {
@@ -73,8 +75,7 @@ export class LandingComponent implements OnInit, OnDestroy {
   }
 
   public handleNavClick(): void {
-    // TODO: replace with navigation
-    console.log('do navigation');
+    this.router.navigate(['/', 'home']);
   }
 
 }
