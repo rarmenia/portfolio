@@ -20,5 +20,5 @@ steps:
 - script: npm install
   displayName: 'Installing Dependencies'
 
-- script: ng lint
+- script: npm run lint
   displayName: 'Linting Project'
