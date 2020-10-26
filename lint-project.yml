@@ -7,7 +7,6 @@ trigger: none
 
 pr:
   - prod
-  - develop
 
 pool:
   vmImage: 'ubuntu-latest'
