@@ -1,3 +1,4 @@
+import { Contact } from './contact.model';
 import { Location } from './../utils/location.model';
 import { firestore } from 'firebase';
 import Timestamp = firestore.Timestamp;
@@ -11,12 +12,14 @@ export class Profile {
   location?: Location;
   icon?: Icon;
   title?: string;
+  contact?: Contact;
 
   constructor(name: Name, properties?: {
     birthday?: Timestamp,
     location?: Location,
     icon?: Icon
     title?: string;
+    contact?: Contact;
   }) {
     this.name = name;
     Object.assign(this, {name, ...properties});
