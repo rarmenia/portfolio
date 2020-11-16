@@ -1,17 +1,28 @@
-import { ContactModel } from './contact.model';
-import { LocationSimpleModel } from './location-simple.model';
-import { NameModel } from './name.model';
-import { ImageModel } from './image.model';
-import {firestore} from 'firebase';
+import { Contact } from './contact.model';
+import { Location } from './../utils/location.model';
+import { firestore } from 'firebase';
 import Timestamp = firestore.Timestamp;
+import { Name } from './name.model';
+import { Icon } from './../utils/icon.model';
 
-export class ProfileModel {
+export class Profile {
 
-  birthday: Timestamp;
-  name: NameModel;
-  icon: ImageModel;
-  location: LocationSimpleModel;
-  title: string;
-  contact: ContactModel;
+  birthday?: Timestamp;
+  name: Name;
+  location?: Location;
+  icon?: Icon;
+  title?: string;
+  contact?: Contact;
+
+  constructor(name: Name, properties?: {
+    birthday?: Timestamp,
+    location?: Location,
+    icon?: Icon
+    title?: string;
+    contact?: Contact;
+  }) {
+    this.name = name;
+    Object.assign(this, {name, ...properties});
+  }
 
 }

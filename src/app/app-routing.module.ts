@@ -1,20 +1,26 @@
+import { LayoutComponent } from '@core/layout/layout.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
 
 const routes: Routes = [
   {
     path: '',
-    pathMatch: 'full',
-    redirectTo: 'landing',
-  },
-  {
-    path: 'landing',
-    loadChildren: () => import('./modules/landing/landing.module').then(m => m.LandingModule)
-  },
-  {
-    path: 'narrative',
-    loadChildren: () => import('./modules/narrative/narrative.module').then(m => m.NarrativeModule)
+    component: LayoutComponent,
+    children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'landing'
+      },
+      {
+        path: 'landing',
+        loadChildren: () => import('./modules/landing/landing.module').then(m => m.LandingModule)
+      },
+      {
+        path: 'home',
+        loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule)
+      }
+    ]
   }
 ];
 

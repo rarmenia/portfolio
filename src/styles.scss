@@ -1,5 +1,8 @@
+@import './scss/material';
+@import './scss/dimensions';
+@import './scss/fonts';
+
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Oswald:wght@300;400;700&family=Roboto:wght@300;400;700&family=Sawarabi+Mincho&display=swap');
 
 html,
 body {
@@ -11,34 +14,27 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-.bgi {
-  height: 100%;
-
-
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+#app-container {
+  height: 100vh;
+  width: 100vw;
 }
 
-$fonts: ('oswald', 'Oswald', sans-serif),
-('roboto', 'Roboto', sans-serif),
-('open-sans', 'Open Sans', sans-serif),
-('mincho', 'Sawarabi Mincho', sans-serif),
-('noto', 'Noto Sans JP', sans-serif);
+.content-fill {
+  height: 100% !important;
+  width: 100% !important;
 
-$font-weights: ('light', 300),
-('regular', 400),
-('bold', 700);
+  min-height: 100% !important;
+  min-width: 100% !important;
+}
 
-@each $short,
-$name,
-$type in $fonts {
+.mat-drawer-container {
+  background: transparent !important;
+}
 
-  @each $weight,
-  $value in $font-weights {
-    .font-#{$short}-#{$weight} {
-      font-family: $name, $type !important;
-      font-weight: $value !important;
-    }
-  }
+.btn:focus {
+  box-shadow: none;
+}
+
+button:focus {
+  outline: none !important;
 }

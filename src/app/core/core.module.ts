@@ -1,40 +1,37 @@
+import { RouterModule } from '@angular/router';
 import { SharedModule } from '@shared/shared.module';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '@env';
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { EnsureModuleLoadedOnceGuard } from './ensure-loaded-once.guard';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { LeftNavComponent } from './left-nav/left-nav.component';
+import { LayoutComponent } from './layout/layout.component';
+import { ToolbarComponent } from './layout/components/toolbar/toolbar.component';
+import { SidenavComponent } from './layout/components/sidenav/sidenav.component';
 
 import { AngularFireModule } from '@angular/fire';
-
-import 'firebase/firestore';
-import { environment } from 'environments/environment';
 
 
 
 @NgModule({
-  declarations: [
-    HeaderComponent,
-    FooterComponent,
-    LeftNavComponent
-  ],
+  declarations: [LayoutComponent, ToolbarComponent, SidenavComponent],
   imports: [
     CommonModule,
     SharedModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
-  ],
-  exports: [
-    HeaderComponent,
-    FooterComponent,
-    LeftNavComponent
+    RouterModule,
+    AngularFireModule.initializeApp(environment.firebase)
   ]
 })
-export class CoreModule extends EnsureModuleLoadedOnceGuard {
-  constructor(@Optional() @SkipSelf() parentModule: CoreModule) {
-    super(parentModule);
+export class CoreModule {
+
+  /**
+   * Ensures the Module is only loaded once.
+   *
+   * @param parentModule the module
+   */
+  constructor(@Optional() @SkipSelf() parentModule?: CoreModule) {
+    if (parentModule) {
+      throw new Error(
+        'CoreModule is already loaded. Import it in the AppModule only');
+    }
   }
 
 }
