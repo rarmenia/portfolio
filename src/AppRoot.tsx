@@ -1,7 +1,7 @@
 import { Suspense, lazy } from 'react';
 import { useSelector } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { LayoutState } from './interfaces/layoutstate';
+import { LayoutState } from './interfaces/layout-state';
 import { RootState } from './redux/root';
 
 const routes = [

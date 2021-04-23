@@ -1,4 +1,4 @@
-import { LayoutState } from '../../interfaces/layoutstate';
+import { LayoutState } from '../../interfaces/layout-state';
 
 export interface RootState {
   layoutState: LayoutState;

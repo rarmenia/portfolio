@@ -1,4 +1,4 @@
-import { LayoutState, getDefault } from '../../../../interfaces/layoutstate';
+import { LayoutState, getDefault } from '../../../../interfaces/layout-state';
 import { LayoutStateActions } from '../enums/layout-state-actions';
 
 export const rLayoutState = (
